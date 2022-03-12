@@ -1,0 +1,70 @@
+c:\Andrej\REST-API>pytest api_test.py -s
+============================================ test session starts =============================================
+platform win32 -- Python 3.8.5, pytest-6.0.1, py-1.9.0, pluggy-0.13.1
+rootdir: c:\Andrej\_WORK_new\Programovanie\Python\REST-API
+collecting ... newUser:
+ {'name': 'Johnny Bravo', 'gender': 'male', 'email': 'johnny.bravo6516@aol.com', 'status': 'active'}
+collected 1 item
+
+api_test.py
+
+CREATE USER:
+<Response [201]>
+{
+    "id": 8737,
+    "name": "Johnny Bravo",
+    "email": "johnny.bravo6516@aol.com",
+    "gender": "male",
+    "status": "active"
+}
+Extracted userId:  8737
+
+
+GET USER:
+<Response [200]>
+{
+    "id": 8737,
+    "name": "Johnny Bravo",
+    "email": "johnny.bravo6516@aol.com",
+    "gender": "male",
+    "status": "active"
+}
+newEmail:  {'email': 'johnny.bravo6516@yahoo.com'}
+
+
+UPDATE USER:
+<Response [200]>
+{
+    "email": "johnny.bravo6516@yahoo.com",
+    "id": 8737,
+    "name": "Johnny Bravo",
+    "gender": "male",
+    "status": "active"
+}
+
+
+GET USER:
+<Response [200]>
+{
+    "id": 8737,
+    "name": "Johnny Bravo",
+    "email": "johnny.bravo6516@yahoo.com",
+    "gender": "male",
+    "status": "active"
+}
+
+
+DELETE USER:
+<Response [204]>
+
+
+GET USER:
+<Response [404]>
+{
+    "message": "Resource not found"
+}
+.
+
+============================================= 1 passed in 12.44s =============================================
+
+c:\Andrej\REST-API>
